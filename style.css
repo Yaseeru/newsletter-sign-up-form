@@ -1,0 +1,228 @@
+* {
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+}
+
+:root {
+     --Red: hsl(4, 100%, 67%);
+     --Light-Red: hsla(4, 100%, 67%, 0.181);
+     --Blue-800: hsl(234, 29%, 20%);
+     --Blue-700: hsl(235, 18%, 26%);
+     --Grey: hsl(0, 0%, 58%);
+     --White: hsl(0, 0%, 100%);
+     --gradient-pink-orange: linear-gradient(to right, rgb(212, 53, 79), rgb(233, 108, 40));
+}
+
+.hidden {
+     display: none !important;
+}
+
+body {
+     font-family: "Roboto", sans-serif;
+     background-color: var(--Blue-800);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     min-height: 100vh;
+}
+
+/* NEWSLETTER CARD */
+.newsletter-card {
+     background-color: var(--White);
+     color: var(--Blue-800);
+     padding: 2rem;
+     display: flex;
+     gap: 1rem;
+     border-radius: 3rem;
+     max-width: 910px;
+}
+
+.newsletter-card .content {
+     padding: 4rem 2rem;
+     display: flex;
+     flex-direction: column;
+     max-width: max-content;
+}
+
+.newsletter-card .content h1 {
+     font-size: 3rem;
+}
+
+.newsletter-card .content ul {
+     list-style: none;
+     padding-left: 0;
+}
+
+.newsletter-card .content ul li {
+     margin-bottom: 1rem;
+     position: relative;
+     padding-left: 2rem;
+}
+
+.newsletter-card .content ul li::before {
+     content: "";
+     position: absolute;
+     left: 0;
+     top: 0;
+     width: 1rem;
+     height: 1rem;
+     background-image: url('assets/images/icon-success.svg');
+     background-size: contain;
+     background-repeat: no-repeat;
+}
+
+.newsletter-card .content form .label {
+     font-weight: 900;
+     font-size: .85rem;
+     margin-bottom: .5rem;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+}
+
+.error-msg {
+     color: var(--Red);
+}
+
+.newsletter-card .content form input,
+button {
+     width: 100%;
+     padding: 1.2rem;
+     border-radius: .5rem;
+     margin-bottom: 1rem;
+     font-size: larger;
+     cursor: pointer;
+}
+
+.newsletter-card .content form input {
+     border: 0.5px solid rgba(128, 128, 128, 0.27);
+}
+
+.error-state {
+     border: 0.5px solid var(--Red) !important;
+     background-color: var(--Light-Red);
+}
+
+.newsletter-card .content form button {
+     background-color: var(--Blue-800);
+     color: var(--White);
+     font-weight: 700;
+     border: none;
+     transition: background 0.3s ease;
+}
+
+.newsletter-card .content form button:hover {
+     background: var(--gradient-pink-orange);
+     box-shadow: 1px 1px 10px var(--Red);
+}
+
+
+/* THANK YOU CARD */
+.thank-you-card {
+     background-color: var(--White);
+     color: var(--Blue-800);
+     padding: 3rem;
+     max-width: 500px;
+     border-radius: 3rem;
+}
+
+.thank-you-card img,
+h1,
+p,
+button {
+     margin: 1rem 0;
+}
+
+.thank-you-card h1 {
+     font-size: 3rem;
+}
+
+.thank-you-card p {
+     line-height: 1.5rem;
+}
+
+.thank-you-card button {
+     background-color: var(--Blue-800);
+     color: var(--White);
+     font-weight: 700;
+     border: none;
+}
+
+.thank-you-card button:hover {
+     background: var(--gradient-pink-orange);
+     box-shadow: 1px 1px 10px var(--Red);
+}
+
+
+@media (max-width: 768px) {
+     .newsletter-card {
+          flex-direction: column-reverse;
+          padding: 2rem 1.5rem;
+          border-radius: 1.5rem;
+          max-width: 90%;
+          text-align: center;
+     }
+
+     .newsletter-card .content {
+          padding: 2rem 0;
+          align-items: center;
+     }
+
+     .newsletter-card .content h1 {
+          font-size: 2.2rem;
+     }
+
+     .newsletter-card .img img {
+          width: 100%;
+          height: auto;
+     }
+
+     .thank-you-card {
+          padding: 2rem 1.5rem;
+          max-width: 90%;
+          border-radius: 1.5rem;
+     }
+
+     .thank-you-card h1 {
+          font-size: 2.2rem;
+     }
+
+     .thank-you-card p {
+          font-size: 0.95rem;
+     }
+
+     .newsletter-card .content form input,
+     .newsletter-card .content form button,
+     .thank-you-card button {
+          font-size: 1rem;
+          padding: 1rem;
+     }
+
+     .newsletter-card .content ul li {
+          font-size: 0.95rem;
+          padding-left: 1.8rem;
+     }
+
+     .newsletter-card .content ul li::before {
+          width: 0.9rem;
+          height: 0.9rem;
+     }
+}
+
+@media (max-width: 480px) {
+
+     .newsletter-card .content h1,
+     .thank-you-card h1 {
+          font-size: 1.8rem;
+     }
+
+     .newsletter-card .content p,
+     .thank-you-card p {
+          font-size: 0.9rem;
+     }
+
+     .newsletter-card {
+          gap: 0.5rem;
+     }
+}
