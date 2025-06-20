@@ -39,8 +39,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github Solution](https://github.com/Yaseeru/newsletter-sign-up-form)
+- Live Site URL: [Netlify Live Site](https://newsletter-signupform1.netlify.app)
 
 ## My process
 
